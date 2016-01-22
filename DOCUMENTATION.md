@@ -29,6 +29,9 @@ POST	/register
 GET		/status
 ```
 
+#### kraken-brain (WIP)
+Dies ist die zentrale Datenhaltung des Kraken. Hier läuft die Datenbank mit entsprechenden Interfaces, welche den Zugriff auf die persistierten Daten enthalten. Das Konzept sieht einen Event-basierten Ansatz vor, welcher sich auf die RethinkDB stützt. 
+
 ### kraken-website-tentacle (WIP)
 Dieser Service erlaubt unter Angabe einer URL das Erzeugen von Screenshots / Thumbnails der jeweiligen Webseite. Ebenfalls möglich über diesen Service ist es, die Webseite zu „snappen“, was eine lauffähige, lokale Kopie einer URL erzeugt.
 
@@ -65,6 +68,5 @@ Dieser Service macht Videos lokal verfügbar.
 ### kraken-comment-tentacle (PLANNED)
 Dieser Service erlaubt es die gesammelten Daten zu kommentieren und darüber zu disktuieren. Dieser Service soll als Social-Plugin ähnlich des Facebook-Kommentar-Plugins funktionieren, welcher beliebig eingebunden werden kann.
 
-### kraken-brain (WIP)
-Dies ist die zentrale Datenhaltung des Kraken. Hier läuft die Datenbank mit entsprechenden Interfaces, welche den Zugriff auf die persistierten Daten enthalten. Das Konzept sieht einen Event-basierten Ansatz vor, welcher sich auf die RethinkDB stützt. 
+
 
