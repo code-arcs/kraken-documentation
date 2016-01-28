@@ -1,0 +1,25 @@
+graph TD;
+    User                -- 80:80 --> kraken_head(kraken_head / kraken_brain)
+    User                -- 443:443 --> kraken_head
+
+    kraken_head         --> podcast_tentacle
+    kraken_head         --> search_tentacle
+    kraken_head         --> website_screenshot_tentacle
+    kraken_head         --> comment_tentacle
+    kraken_head         --> image_tentacle
+    kraken_head         --> video_tentacle
+
+    search_tentacle     --> indexdb((ElasticSearch))
+    kraken_head         --> rethinkdb((RethinkDB))
+
+    classDef tentacle fill:#89b89d, color:#000, stroke: #000
+    classDef tentaclePlanned fill:#89b89d, color:#000, stroke: #000, stroke-dasharray:3
+    classDef datastore fill:#a6a2d0, stroke:#542c4a
+    classDef host fill:lightyellow, stroke:#000000
+
+    class User host
+
+    class podcast_tentacle,website_screenshot_tentacle,kraken_head tentacle
+    class search_tentacle,comment_tentacle,image_tentacle,video_tentacle tentaclePlanned
+
+    class indexdb,rethinkdb datastore
